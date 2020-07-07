@@ -31,7 +31,7 @@ public class BeerServiceRestTemplateImpl implements BeerService {
 
     @Override
     public Optional<BeerDto> getBeerByUpc(String upc) {
-        return Optional.of(restTemplate.getForObject(beerServiceHost + BEER_UPC_PATH_V1 + upc, BeerDto.class));
+        return Optional.of(restTemplate.getForObject(beerServiceHost + BEER_UPC_PATH_V1, BeerDto.class));
     }
 
     public void setBeerServiceHost(String beerServiceHost) {
